@@ -64,9 +64,9 @@ cd Property_Price_Prediction_XGBoost
 
 ### 4. Plots Generated
 During the execution of the script, the following plots are generated:
-- `train_plot.png`: Comparison between actual and predicted prices for the training set.
-- `test1_plot.png`: Comparison between actual and predicted prices for the first test dataset.
-- `test2_plot.png`: Comparison between actual and predicted prices for the second test dataset.
+- ![Data Train Plot](train_plot.png): Comparison between actual and predicted prices for the training set.
+- ![Data Test 1 Plot](test_plot.png): Comparison between actual and predicted prices for the first test dataset.
+- ![Data test 2 Plot](test2_plot.png): Comparison between actual and predicted prices for the second test dataset.
 
 These plots are saved in the same directory as the script and provide insights into model performance.
 
