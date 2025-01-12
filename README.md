@@ -11,7 +11,6 @@ This project utilizes the `XGBoost` machine learning algorithm to predict proper
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Results](#results)
-- [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -97,6 +96,3 @@ Below are RMSE values obtained from each fold of the cross-validation:
 - Test Set 2: `4072324683`
 
 ---
-
-## Acknowledgments
-Thanks to the open-source community for developing the tools and libraries used in this project, particularly `XGBoost` and `caret` for enabling advanced machine learning workflows in R.
