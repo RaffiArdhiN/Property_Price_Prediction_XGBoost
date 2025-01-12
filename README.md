@@ -43,7 +43,6 @@ To run the code, ensure the following dependencies are installed:
 ## Usage
 1. Clone this repository
 ```
-bash
 git clone https://github.com/RaffiArdhiN/Property_Price_Prediction_XGBoost.git
 cd Property_Price_Prediction_XGBoost
 ```
@@ -58,7 +57,6 @@ cd Property_Price_Prediction_XGBoost
 
 ## Project Structure
 ```
-bash
 .
 ├── model.R                # R script for data preprocessing and model training
 ├── Copy of Merge Data Properti - Sheet1.csv  # Main dataset
