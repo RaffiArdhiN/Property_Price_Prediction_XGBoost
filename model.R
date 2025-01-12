@@ -218,13 +218,15 @@ RMSE(as.matrix(y_train), ensemble_predictions)
 comparison_data <- data.frame(Actual = as.matrix(y_train), Predicted = ensemble_predictions)
 
 # Plot garis data train
-ggplot(comparison_data, aes(x = seq_along(Harga), y = Harga, color = "Actual")) +
+plot_train <- ggplot(comparison_data, aes(x = seq_along(Harga), y = Harga, color = "Actual")) +
   geom_line() +
   geom_line(aes(y = Predicted, color = "Predicted")) +
   labs(title = "Perbandingan Harga Rumah Sebenarnya dan Hasil Prediksi Data Train",
        x = "Harga",
        y = "Prediksi") +
   scale_color_manual(values = c("blue", "red"), name = "Legend", labels = c("Actual", "Predicted"))
+
+ggsave("train_plot.png", plot = plot_train, width = 10, height = 6)
 
 predictions1 <- predict(xg_model_fold1, as.matrix(X_test))
 predictions2 <- predict(xg_model_fold2, as.matrix(X_test))
@@ -250,13 +252,15 @@ predicted_values <- ensemble_predictions2
 comparison_data <- data.frame(Actual = actual_values, Predicted = predicted_values)
 
 # Plot garis data test
-ggplot(comparison_data, aes(x = seq_along(Harga), y = Harga, color = "Actual")) +
+plot_test <- ggplot(comparison_data, aes(x = seq_along(Harga), y = Harga, color = "Actual")) +
   geom_line() +
   geom_line(aes(y = Predicted, color = "Predicted")) +
   labs(title = "Perbandingan Harga Rumah Sebenarnya dan Hasil Prediksi Data Test",
        x = "Harga",
        y = "Prediksi") +
   scale_color_manual(values = c("blue", "red"), name = "Legend", labels = c("Actual", "Predicted"))
+
+ggsave("test_plot.png", plot = plot_test, width = 10, height = 6)
 
 # Input data testing baru
 data_test_baru <- read.table("Data Testing Properti.csv", header = TRUE, sep=",")
@@ -397,13 +401,15 @@ ensemble_predictions2
 comparison_data <- data.frame(Actual = actual_values, Predicted = predicted_values)
 
 # Plot garis data test
-ggplot(comparison_data, aes(x = seq_along(Harga), y = Harga, color = "Actual")) +
+plot_test2 <- ggplot(comparison_data, aes(x = seq_along(Harga), y = Harga, color = "Actual")) +
   geom_line() +
   geom_line(aes(y = Predicted, color = "Predicted")) +
-  labs(title = "Perbandingan Harga Rumah Sebenarnya dan Hasil Prediksi Data Test Pa Lala",
+  labs(title = "Perbandingan Harga Rumah Sebenarnya dan Hasil Prediksi Data Test Hidden",
        x = "Harga",
        y = "Prediksi") +
   scale_color_manual(values = c("blue", "red"), name = "Legend", labels = c("Actual", "Predicted"))
+
+ggsave("test2_plot.png", plot = plot_test2, width = 10, height = 6)
 
 # Input data testing baru
 data_test_baru <- read.table("Data Testing Properti.csv", header = TRUE, sep=",")
